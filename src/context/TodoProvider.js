@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
 import {
-  GET_TODOS,
   CREATE_TODO,
   UPDATE_TODO,
   DELETE_TODO,
@@ -82,7 +81,6 @@ const TodoProvider = (props) => {
 
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
-  // ACTIONS
   const createTodo = (todo) => {
     dispatch({
       type: CREATE_TODO,
